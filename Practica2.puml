@@ -1,0 +1,34 @@
+Primer ejemplo biblioteca
+@startuml
+top to bottom direction
+:First Actor:->(Reservar Libre)
+:First Actor:->(Prestar Libro)
+:First Actor:->(Devolver Libro)
+:Second Actor:->(Prestar Libro)
+:Second Actor:->(Actualizar Catálogo)
+@enduml
+Relación de inclusión
+@startuml
+top to bottom direction
+:Bibliotecario:->(Baja socio)
+:(Baja socio):-->(Buscar socio)
+@enduml
+Extensión
+@startuml
+top to bottom direction
+:Agente:->(Evaluar solicitud de crédito)
+:(Solicitar información adicional):-->(Evaluar solicitud de crédito)
+@enduml
+Herencia
+@startuml
+top to bottom direction
+:Agente:->(Enviar solicitud de crédito)
+:(Personal):-->(Enviar solicitud de crédito)
+:(Profesional):-->(Enviar solicitud de crédito)
+@enduml
+Herencia actores
+@startuml
+top to bottom direction
+:Cliente Corporativo:->:Cliente Bancario:
+:Cliente Normal:->:Cliente Bancario:
+@enduml
